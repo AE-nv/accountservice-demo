@@ -1,6 +1,6 @@
 package demo.services;
 
-import demo.rest.resources.v2.AccountResource;
+import demo.rest.resources.AccountResource;
 import demo.services.domain.accounts.Account;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +13,7 @@ public class AccountMapper {
         return accounts.stream()
                 .map(account -> {
                     final AccountResource accountResource = new AccountResource();
-                    accountResource.setId(account.getId());
+//                    accountResource.setId(account.getId());
                     accountResource.setType(account.getType());
                     accountResource.setBalance(account.getBalance());
                     accountResource.setIban(account.getIban());

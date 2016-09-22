@@ -1,7 +1,8 @@
 package demo.services;
 
+import demo.rest.resources.AccountResource;
 import demo.rest.resources.CreateAccountCommand;
-import demo.rest.resources.v2.AccountResource;
+import demo.rest.resources.AccountResource;
 import demo.services.domain.accounts.Account;
 import demo.services.domain.accounts.AccountRepository;
 import demo.services.domain.shared.exceptions.BusinessException;
@@ -33,7 +34,7 @@ public class AccountService {
     }
 
     @Transactional(readOnly = true)
-    public List<demo.rest.resources.v6.AccountResource> getAccountResourcesHypermedia() {
+    public List<AccountResource> getAccountResourcesHypermedia() {
         return accountRepository.getAccountResourcesHypermedia();
     }
 
@@ -50,7 +51,7 @@ public class AccountService {
         return createAccountCommand.getType() != null && createAccountCommand.getOwnerIds() != null && !createAccountCommand.getOwnerIds().isEmpty();
     }
 
-    public demo.rest.resources.v6.AccountResource get(String id) {
+    public AccountResource get(String id) {
         return accountRepository.getResourceById(id);
     }
 
