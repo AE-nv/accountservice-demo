@@ -1,24 +1,12 @@
 package be.ae.services.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Currency;
 import java.util.List;
-
-@Entity
-@NamedQueries({
-        @NamedQuery(
-            name = Account.FIND_ALL,
-            query = "select account from Account account"
-        )
-    })
 public class Account {
-
-    public static final String FIND_ALL = "Account.findAll";
 
     @Id
     @GeneratedValue(generator="system-uuid")
