@@ -2,15 +2,12 @@ package be.ae.services;
 
 import be.ae.rest.model.AccountResource;
 import be.ae.rest.model.CreateAccountCommand;
-import be.ae.services.exceptions.BusinessException;
-import be.ae.services.exceptions.ErrorCode;
 import be.ae.services.mapper.AccountMapper;
 import be.ae.services.model.Account;
 import be.ae.services.repositories.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -39,16 +36,9 @@ public class AccountService {
     }
 
     public String create(CreateAccountCommand command) {
-        if (!isValidCreateAccountCommand(command)) {
-            throw new BusinessException(ErrorCode.MISSING_CREATE_ACCOUNT_INFORMATION);
-        }
         final Account account = new Account(command.getType(), command.getOwnerIds());
         accountRepository.save(account);
         return account.getId();
-    }
-
-    private boolean isValidCreateAccountCommand(@RequestBody CreateAccountCommand createAccountCommand) {
-        return createAccountCommand.getType() != null && createAccountCommand.getOwnerIds() != null && !createAccountCommand.getOwnerIds().isEmpty();
     }
 
     public void delete(String id) {

@@ -1,8 +1,6 @@
 package be.ae.services.repositories;
 
-import be.ae.services.exceptions.UnknownResourceException;
 import be.ae.services.model.Account;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -24,9 +22,6 @@ public class AccountRepository {
 
     public Account getById(String id) {
         final Account account = em.find(Account.class, id);
-        if (account == null) {
-            throw new UnknownResourceException();
-        }
         return account;
     }
 

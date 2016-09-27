@@ -38,7 +38,7 @@ public class AccountController {
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> create(@RequestBody CreateAccountCommand createAccountCommand) throws URISyntaxException {
+    public ResponseEntity<?> create(@RequestBody CreateAccountCommand createAccountCommand) {
         final String id = accountService.create(createAccountCommand);
         return ResponseEntity.noContent().build();
     }
