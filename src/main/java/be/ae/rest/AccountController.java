@@ -4,7 +4,6 @@ import be.ae.rest.model.AccountResource;
 import be.ae.rest.model.CreateAccountCommand;
 import be.ae.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.ExposesResourceFor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
