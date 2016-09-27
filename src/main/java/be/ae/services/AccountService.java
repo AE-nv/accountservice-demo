@@ -30,8 +30,7 @@ public class AccountService {
 
     @Autowired
     private EntityLinks entityLinks;
-
-    @LogCall
+    
     @Transactional(readOnly = true)
     public List<AccountResource> getAccounts() {
         final List<Account> accounts = accountRepository.getAccounts();
