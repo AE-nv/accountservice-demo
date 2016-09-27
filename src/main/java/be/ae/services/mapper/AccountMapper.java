@@ -24,11 +24,8 @@ public class AccountMapper {
 
     public AccountResource map(Account account) {
         AccountResource resource = new AccountResource();
-        resource.setLabel(account.getLabel());
-        resource.setType(account.getType());
-        resource.setOwners(account.getOwnerIds());
-        resource.setIban(account.getIban());
-        resource.setBalance(account.getBalance());
+
+        //TODO
 
         return resource;
     }
