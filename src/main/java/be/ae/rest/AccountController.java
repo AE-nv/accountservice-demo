@@ -4,8 +4,6 @@ import be.ae.rest.model.AccountResource;
 import be.ae.rest.model.CreateAccountCommand;
 import be.ae.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityLinks;
-import org.springframework.hateoas.ExposesResourceFor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -14,12 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.net.URISyntaxException;
 import java.util.List;
 
 @Controller
 @RequestMapping("/accounts")
-@ExposesResourceFor(AccountResource.class)
 public class AccountController {
 
     @Autowired
