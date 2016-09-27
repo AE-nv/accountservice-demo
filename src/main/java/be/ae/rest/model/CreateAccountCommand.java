@@ -1,6 +1,6 @@
 package be.ae.rest.model;
 
-import be.ae.service.model.AccountType;
+import be.ae.services.model.AccountType;
 import lombok.Data;
 
 import java.util.List;

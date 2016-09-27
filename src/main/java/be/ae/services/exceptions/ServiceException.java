@@ -1,4 +1,4 @@
-package be.ae.service.exceptions;
+package be.ae.services.exceptions;
 
 
 import lombok.Getter;

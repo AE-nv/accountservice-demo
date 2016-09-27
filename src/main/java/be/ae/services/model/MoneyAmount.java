@@ -1,4 +1,4 @@
-package be.ae.service.model;
+package be.ae.services.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

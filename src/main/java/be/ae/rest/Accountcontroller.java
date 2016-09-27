@@ -2,7 +2,7 @@ package be.ae.rest;
 
 import be.ae.rest.model.AccountResource;
 import be.ae.rest.model.CreateAccountCommand;
-import be.ae.service.AccountService;
+import be.ae.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityLinks;
 import org.springframework.hateoas.ExposesResourceFor;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller

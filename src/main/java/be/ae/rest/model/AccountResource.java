@@ -1,7 +1,7 @@
 package be.ae.rest.model;
 
-import be.ae.service.model.AccountType;
-import be.ae.service.model.MoneyAmount;
+import be.ae.services.model.AccountType;
+import be.ae.services.model.MoneyAmount;
 import lombok.Data;
 import org.springframework.hateoas.ResourceSupport;
 

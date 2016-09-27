@@ -1,7 +1,7 @@
-package be.ae.service;
+package be.ae.services;
 
 import be.ae.rest.model.ErrorResource;
-import be.ae.service.exceptions.*;
+import be.ae.services.exceptions.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
-package be.ae.service.mapper;
+package be.ae.services.mapper;
 
 import be.ae.rest.model.AccountResource;
-import be.ae.service.model.Account;
+import be.ae.services.model.Account;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityLinks;

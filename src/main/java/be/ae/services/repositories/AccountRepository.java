@@ -1,7 +1,7 @@
-package be.ae.service.repository;
+package be.ae.services.repositories;
 
-import be.ae.service.exceptions.UnknownResourceException;
-import be.ae.service.model.Account;
+import be.ae.services.exceptions.UnknownResourceException;
+import be.ae.services.model.Account;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Repository;
 

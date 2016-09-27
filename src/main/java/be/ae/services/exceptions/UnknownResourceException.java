@@ -1,4 +1,4 @@
-package be.ae.service.exceptions;
+package be.ae.services.exceptions;
 
 public class UnknownResourceException extends ServiceException {
     public UnknownResourceException() {
