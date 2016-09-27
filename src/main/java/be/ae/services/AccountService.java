@@ -2,7 +2,6 @@ package be.ae.services;
 
 import be.ae.rest.model.AccountResource;
 import be.ae.rest.model.CreateAccountCommand;
-import be.ae.services.aspects.LogCall;
 import be.ae.services.exceptions.BusinessException;
 import be.ae.services.exceptions.ErrorCode;
 import be.ae.services.mapper.AccountMapper;
@@ -30,7 +29,7 @@ public class AccountService {
 
     @Autowired
     private EntityLinks entityLinks;
-    
+
     @Transactional(readOnly = true)
     public List<AccountResource> getAccounts() {
         final List<Account> accounts = accountRepository.getAccounts();
