@@ -36,9 +36,9 @@ public class AccountService {
     }
 
     public String create(CreateAccountCommand command) {
-        final Account account = new Account(command.getType(), command.getOwnerIds());
+        final Account account = new Account();//TODO instantiate correctly
         accountRepository.save(account);
-        return account.getId();
+        return null;//TODO return id
     }
 
     public void delete(String id) {
