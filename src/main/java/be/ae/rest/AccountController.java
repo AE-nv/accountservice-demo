@@ -25,9 +25,6 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-    @Autowired
-    private EntityLinks entityLinks;
-
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<AccountResource>> list() {
         final List<AccountResource> accounts = accountService.getAccounts();
@@ -43,7 +40,7 @@ public class AccountController {
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> create(@RequestBody CreateAccountCommand createAccountCommand) throws URISyntaxException {
         final String id = accountService.create(createAccountCommand);
-        return ResponseEntity.created(entityLinks.linkForSingleResource(AccountResource.class, id).toUri()).build();
+        return ResponseEntity.noContent().build();
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

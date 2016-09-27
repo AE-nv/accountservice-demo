@@ -10,11 +10,13 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
-@NoArgsConstructor
 public class AccountRepository {
 
     @PersistenceContext
     private EntityManager em;
+
+    public AccountRepository() {
+    }
 
     public List<Account> getAccounts() {
         return em.createNamedQuery(Account.FIND_ALL).getResultList();

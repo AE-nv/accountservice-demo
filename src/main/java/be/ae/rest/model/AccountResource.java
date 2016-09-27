@@ -7,7 +7,7 @@ import org.springframework.hateoas.ResourceSupport;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AccountResource extends ResourceSupport {
+public class AccountResource {
 
     private String label;
     private AccountType type;

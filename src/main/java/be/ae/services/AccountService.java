@@ -7,9 +7,7 @@ import be.ae.services.exceptions.ErrorCode;
 import be.ae.services.mapper.AccountMapper;
 import be.ae.services.model.Account;
 import be.ae.services.repositories.AccountRepository;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityLinks;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,9 +23,6 @@ public class AccountService {
 
     @Autowired
     private AccountMapper accountMapper;
-
-    @Autowired
-    private EntityLinks entityLinks;
 
     public AccountService() {
     }
