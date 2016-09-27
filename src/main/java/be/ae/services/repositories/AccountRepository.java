@@ -10,26 +10,26 @@ import java.util.List;
 @Repository
 public class AccountRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+    //TODO
 
     public AccountRepository() {
     }
 
     public List<Account> getAccounts() {
-        return em.createNamedQuery(Account.FIND_ALL).getResultList();
+        //TODO
+        return null;
     }
 
     public Account getById(String id) {
-        final Account account = em.find(Account.class, id);
-        return account;
+        //TODO
+        return null;
     }
 
     public void delete(Account account) {
-        em.remove(account);
+        //TODO
     }
 
     public void save(Account account) {
-        em.persist(account);
+        //TODO
     }
 }
