@@ -1,13 +1,8 @@
 package be.ae.services.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.math.BigDecimal;
 import java.util.Currency;
 
-@Data
-@NoArgsConstructor
 public class MoneyAmount {
     private BigDecimal amount;
     private Currency currency;
@@ -17,4 +12,22 @@ public class MoneyAmount {
         this.currency = currency;
     }
 
+    public MoneyAmount() {
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public Currency getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(Currency currency) {
+        this.currency = currency;
+    }
 }

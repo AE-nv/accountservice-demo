@@ -20,7 +20,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/accounts")
 @ExposesResourceFor(AccountResource.class)
-public class Accountcontroller {
+public class AccountController {
 
     @Autowired
     private AccountService accountService;

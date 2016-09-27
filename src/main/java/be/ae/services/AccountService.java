@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 
 @Service
-@NoArgsConstructor
 @Transactional(readOnly = false)
 public class AccountService {
 
@@ -29,6 +28,9 @@ public class AccountService {
 
     @Autowired
     private EntityLinks entityLinks;
+
+    public AccountService() {
+    }
 
     @Transactional(readOnly = true)
     public List<AccountResource> getAccounts() {

@@ -9,9 +9,7 @@ import java.math.BigDecimal;
 import java.util.Currency;
 import java.util.List;
 
-@Data
 @Entity
-@NoArgsConstructor
 @NamedQueries({
         @NamedQuery(
             name = Account.FIND_ALL,
@@ -41,6 +39,9 @@ public class Account {
     @ElementCollection
     private List<String> ownerIds;
 
+    public Account() {
+    }
+
     public Account(AccountType type, List<String> ownerIds) {
         this.label = generateLabel(type);
         this.type = type;
@@ -62,5 +63,53 @@ public class Account {
 
     private String generateIban() {
         return "new iban generated";
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public AccountType getType() {
+        return type;
+    }
+
+    public void setType(AccountType type) {
+        this.type = type;
+    }
+
+    public String getIban() {
+        return iban;
+    }
+
+    public void setIban(String iban) {
+        this.iban = iban;
+    }
+
+    public MoneyAmount getBalance() {
+        return balance;
+    }
+
+    public void setBalance(MoneyAmount balance) {
+        this.balance = balance;
+    }
+
+    public List<String> getOwnerIds() {
+        return ownerIds;
+    }
+
+    public void setOwnerIds(List<String> ownerIds) {
+        this.ownerIds = ownerIds;
     }
 }

@@ -11,11 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-@NoArgsConstructor
 public class AccountMapper {
 
     @Autowired
     private EntityLinks entityLinks;
+
+    public AccountMapper() {
+    }
 
     public List<AccountResource> map(List<Account> accounts) {
         List<AccountResource> resources = new ArrayList<>();
